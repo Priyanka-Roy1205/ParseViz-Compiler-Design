@@ -1,56 +1,101 @@
 # ParseViz: Parser Stack Operation and Parse Tree Visualizer
 
 ## Project Overview
-ParseViz is a Python-based Compiler Design project that visualizes the parsing process of arithmetic expressions. It displays token sequences, parser stack operations, postfix expressions, and parse trees.
+
+ParseViz is an interactive Python application developed as part of a Compiler Design Project-Based Learning (PBL) project. It visualizes parser stack operations, postfix expression conversion, expression evaluation, and parse tree construction.
+
+The application uses Streamlit to provide a simple, interactive web interface for understanding how arithmetic expressions are processed.
 
 ## Objectives
-- Understand how arithmetic expressions are processed.
-- Visualize operator-stack operations.
-- Generate a parse tree from an expression.
-- Evaluate valid numeric expressions.
-- Demonstrate compiler design concepts through an interactive interface.
 
-## Technologies Used
-- Python
-- Streamlit
-- HTML and CSS
-- Unit testing with Python's unittest module
+- Understand expression parsing and operator precedence.
+- Visualize stack operations during expression processing.
+- Convert infix expressions into postfix notation.
+- Generate a parse tree for an arithmetic expression.
+- Evaluate supported arithmetic expressions.
 
 ## Features
-- Interactive web interface
-- Tokenization of arithmetic expressions
-- Parser stack operation visualization
-- Postfix expression generation
-- Parse tree visualization
-- Numeric expression evaluation
-- Unit tests for important functions
 
-## Supported Operators
-Addition (+), subtraction (-), multiplication (*), and division (/), with parentheses for grouping.
+- Interactive expression input.
+- Token sequence visualization.
+- Parser stack operation steps.
+- Postfix expression generation.
+- Parse tree visualization.
+- Arithmetic expression evaluation.
+- Support for parentheses and operator precedence.
 
-## How to Run
+## Technologies Used
+
+- Python
+- Streamlit
+- Regular Expressions
+- Recursive-Descent Parsing
+- Stack-Based Expression Processing
+
+## Grammar
+
+The application uses the following expression grammar for constructing parse trees:
+
+```text
+E → E + T | E - T | T
+T → T * F | T / F | F
+F → (E) | id
+```
+
+## Installation and Execution
+
 1. Install Python.
-2. Open a terminal in the project folder.
-3. Install dependencies:
+2. Clone or download this repository.
+3. Open a terminal in the project directory.
+4. Install the required dependency:
 
-   `python -m pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
-4. Start the application:
+5. Start the application:
 
-   `python -m streamlit run app.py`
+```bash
+python -m streamlit run app.py
+```
 
-5. Open the local URL shown in the terminal.
+6. Open the local URL displayed in the terminal.
 
-## Run Tests
-Execute:
+## Example
 
-`python -m unittest test_parseviz.py`
+Input expression:
 
-## Project Files
-- `app.py` — Main application
-- `requirements.txt` — Required Python packages
-- `test_parseviz.py` — Automated tests
-- `README.md` — Project documentation
+```text
+2+3*4
+```
 
-## Conclusion
-ParseViz provides an interactive way to understand expression parsing, stack operations, postfix conversion, and parse-tree construction as part of Compiler Design.
+Expected postfix expression:
+
+```text
+2 3 4 * +
+```
+
+Expected evaluation result:
+
+```text
+14
+```
+
+## Testing
+
+Run the automated tests using:
+
+```bash
+python -m unittest test_parseviz.py
+```
+
+## Project Type
+
+Compiler Design — Project-Based Learning (PBL)
+
+## Author
+
+Priyanka Roy
+B.Tech — Computer Science and Engineeringt
+
+
