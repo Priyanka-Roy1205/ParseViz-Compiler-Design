@@ -96,6 +96,6 @@ Compiler Design — Project-Based Learning (PBL)
 ## Author
 
 Priyanka Roy
-B.Tech — Computer Science and Engineeringt
+B.Tech — Computer Science and Engineering
 
 
